@@ -86,8 +86,8 @@ const Projects = () => {
     }
   ]
 
-  const getStatusStyles = (statusColor) => {
-    const styles = {
+  const getStatusStyles = (statusColor: string) => {
+    const styles: Record<string, any> = {
       blue: {
         text: "text-blue-400",
         bg: "bg-blue-500/10",
@@ -229,7 +229,7 @@ const Projects = () => {
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {featuredProjects.map((project, index) => (
+              {featuredProjects.map((project) => (
                 <motion.div
                   key={project.title}
                   className="group perspective-1000"
